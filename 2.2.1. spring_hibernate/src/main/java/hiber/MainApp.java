@@ -32,7 +32,7 @@ public class MainApp {
       userService.addCarToUser(user4, new Car("Toyota", 4));
 
       List<User> users = userService.listUsers();
-      System.out.println(users);
+      System.out.println(users);//todo: в одну стоку ..даже в учебных целях не выводят в консоль
       System.out.println("+++++++++++++++++++++++++");
       System.out.println(userService.getUserByCar("kia", 1));
 

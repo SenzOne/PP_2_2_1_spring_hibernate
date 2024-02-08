@@ -15,7 +15,7 @@ public class UserServiceImp implements UserService {
    @Autowired
    private UserDao userDao;
 
-   @Transactional
+   @Transactional//todo: если таки удастся применить @Transactional - то @Transactional выносится как обобщение - над классом
    @Override
    public void add(User user) {
       userDao.add(user);
@@ -31,7 +31,6 @@ public class UserServiceImp implements UserService {
    @Override
    public void addCarToUser(User user, Car car) {
       userDao.addCarToUser(user, car);
-
    }
 
    @Transactional(readOnly = true)

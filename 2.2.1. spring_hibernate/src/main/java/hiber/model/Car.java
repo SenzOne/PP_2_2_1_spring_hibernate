@@ -56,6 +56,8 @@ public class Car {
       this.user = user;
    }
 
+   //todo: необходимо дописать переопределение equals/hashCode
+
    @Override
    public String toString() {
       return "Car" +

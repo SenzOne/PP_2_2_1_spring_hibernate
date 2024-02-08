@@ -73,6 +73,8 @@ public class User {
       car.setUser(this);
    }
 
+   //todo: необходимо дописать переопределение equals/hashCode
+
    @Override
    public String toString() {
       return "User " +

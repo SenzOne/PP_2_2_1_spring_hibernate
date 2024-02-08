@@ -2,6 +2,7 @@ package hiber.dao;
 
 import hiber.model.Car;
 import hiber.model.User;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -17,6 +18,8 @@ public class UserDaoImp implements UserDao {
 
    @Override
    public void add(User user) {
+      //todo: Session session = sessionFactory.getCurrentSession(); - это то, что мы должны получить в каждом методе и обернуть try_catch_with_resource
+      //todo: на нужных методах (нужно изучить на каких) нужно использовать открытие/закрытие Transaction пока вручную (без аннотирования)
       sessionFactory.getCurrentSession().save(user);
    }
 
