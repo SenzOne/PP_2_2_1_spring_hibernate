@@ -7,7 +7,9 @@ import hiber.service.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class MainApp {
    public static void main(String[] args) throws SQLException {
@@ -32,7 +34,7 @@ public class MainApp {
       userService.addCarToUser(user4, new Car("Toyota", 4));
 
       List<User> users = userService.listUsers();
-      System.out.println(users);//todo: в одну стоку ..даже в учебных целях не выводят в консоль
+      users.forEach(System.out::println);
       System.out.println("+++++++++++++++++++++++++");
       System.out.println(userService.getUserByCar("kia", 1));
 
